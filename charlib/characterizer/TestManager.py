@@ -245,7 +245,7 @@ class TestManager:
         vss = settings.vss.voltage * settings.units.voltage
         # TODO: Make these values configurable from settings
         f_start = 10 @ u_Hz
-        f_stop = 10 @ u_GHz
+        f_stop = 20 @ u_MHz # down from 10GHz in upstream CharLib
         r_in = 10 @ u_GOhm
         i_in = 1 @ u_uA
         r_out = 10 @ u_GOhm
