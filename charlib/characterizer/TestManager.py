@@ -306,8 +306,8 @@ class TestManager:
         """Annotate cell liberty file with pg_pins"""
         self._cell.add_pg_pin(vdd.name, vdd.name, 'primary_power')
         self._cell.add_pg_pin(vss.name, vss.name, 'primary_ground')
-        self._cell.add_pg_pin(pwell.name, pwell.name, 'pwell')
-        self._cell.add_pg_pin(nwell.name, nwell.name, 'nwell')
+        #self._cell.add_pg_pin(pwell.name, pwell.name, 'pwell')
+        #self._cell.add_pg_pin(nwell.name, nwell.name, 'nwell')
 
 
 class CombinationalTestManager(TestManager):
