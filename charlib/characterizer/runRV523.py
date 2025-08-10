@@ -106,8 +106,6 @@ def run_charlib(args):
                 print(f'Skipping "{cell}_config.json5"')
             continue
 
-    print(config)
-
     # Check grammar and fill
     config = ConfigFile.validate(config)
 
