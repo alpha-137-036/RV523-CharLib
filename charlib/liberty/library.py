@@ -116,7 +116,10 @@ class Library:
             f'  current_unit : "1{spice_unit(self.units.current)}";',
             f'  pulling_resistance_unit : "1{spice_unit(self.units.resistance)}";',
             f'  leakage_power_unit : "1{spice_unit(self.units.power)}";',
-            f'  capacitive_load_unit : "1{spice_unit(self.units.capacitance)}";',
+            # for some reason, this makes ABC crash:
+            # f'  capacitive_load_unit : "1{spice_unit(self.units.capacitance)}";',
+            # but this works
+            f'  capacitive_load_unit(1, {spice_unit(self.units.capacitance).lower()});',
             '\n  /* Slew characteristics */',
             f'  slew_upper_threshold_pct_rise : {self.slew_upper_threshold_pct_rise};',
             f'  slew_lower_threshold_pct_rise : {self.slew_lower_threshold_pct_rise};',
