@@ -48,6 +48,8 @@ class TestManager:
             for func in functions:
                 if '=' in func:
                     func_pin, expr = func.split('=')
+                    func_pin = func_pin.strip()
+                    expr = expr.strip()
                     # Check for nonblocking assign in LHS of equation
                     if '<' in func_pin:
                         func_pin = func_pin.replace('<','').strip()
