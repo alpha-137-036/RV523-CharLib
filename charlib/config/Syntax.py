@@ -263,7 +263,7 @@ class ConfigFile:
                     ),
                     default="fJ"): energy_syntax
             },
-
+        Optional("nom_voltage") : number_syntax,
         Optional("named_nodes") : {
             Optional(
                 Literal(
